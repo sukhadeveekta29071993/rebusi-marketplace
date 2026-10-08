@@ -1,3 +1,62 @@
+/* =================================
+   Text
+================================= */
+
+.text-orange {
+    color: var(--orange) !important;
+}
+
+.text-secondary-custom {
+    color: var(--text-secondary) !important;
+}
+
+.text-muted-custom {
+    color: var(--text-muted) !important;
+}
+
+
+/* =================================
+   Background
+================================= */
+
+.bg-dark-custom {
+    background-color: var(--bg-dark) !important;
+}
+
+.bg-dark-2 {
+    background-color: var(--bg-dark-2) !important;
+}
+
+.bg-dark-3 {
+    background-color: var(--bg-dark-3) !important;
+}
+
+.bg-orange {
+    background-color: var(--orange) !important;
+}
+
+.bg-orange-soft {
+    background-color: var(--or-dim) !important;
+}
+
+
+/* =================================
+   Borders
+================================= */
+
+.border-orange {
+    border-color: var(--orange) !important;
+}
+
+.border-dark-custom {
+    border-color: var(--border-color) !important;
+}
+
+
+/* =================================
+   Font
+================================= */
+
 .font-primary {
     font-family: var(--font-primary) !important;
 }
@@ -6,90 +65,87 @@
     font-family: var(--font-secondary) !important;
 }
 
-.font-display {
-    font-family: var(--font-display) !important;
-}
-
 .font-mono {
     font-family: var(--font-mono) !important;
 }
 
 
-/* =========================================================
-   CONTAINER
-========================================================= */
+/* =================================
+   Width
+================================= */
 
-.container {
-    width: 100%;
-    max-width: var(--container-max-width);
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+.w-fit {
+    width: fit-content !important;
 }
 
 
-/* =========================================================
-   SECTION
-========================================================= */
+/* =================================
+   Cursor
+================================= */
 
-.section,
-.section-padding {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+.cursor-pointer {
+    cursor: pointer !important;
 }
 
 
-/* =========================================================
-   FLEX
-========================================================= */
+/* =================================
+   Transitions
+================================= */
 
-.flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.flex-between {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.transition {
+    transition: all var(--transition-normal);
 }
 
 
-/* =========================================================
-   GRID
-========================================================= */
+/* =================================
+   Hover
+================================= */
 
-.grid-2 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+.hover-lift {
+    transition:
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal);
 }
 
-.grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-}
-
-.grid-4 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
+.hover-lift:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
 }
 
 
-/* =========================================================
-   TEXT
-========================================================= */
+/* =================================
+   Text Truncate
+================================= */
 
-.text-gradient {
-    background: linear-gradient(45deg,
-            var(--orange),
-            var(--saffron));
+.text-truncate-2 {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+}
 
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.text-truncate-3 {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+}
+
+
+/* =================================
+   Position
+================================= */
+
+.z-index-1 {
+    z-index: 1;
+}
+
+.z-index-10 {
+    z-index: 10;
+}
+
+.z-index-100 {
+    z-index: 100;
 }
