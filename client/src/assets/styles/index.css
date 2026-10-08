@@ -1,0 +1,17 @@
+@import "./variables.css";
+@import "./common.css";
+@import "./utilities.css";
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+}
