@@ -1,11 +1,11 @@
 import { Navigate, Outlet, useLocation } from "react-router-dom";
 
-interface ProtectedRouteProps {
-  isAuthenticated?: boolean;
-}
+import { useAppSelector } from "../store/hooks";
 
-function ProtectedRoute({ isAuthenticated = false }: ProtectedRouteProps) {
+function ProtectedRoute() {
   const location = useLocation();
+
+  const isAuthenticated = useAppSelector((state) => state.auth.isAuthenticated);
 
   if (!isAuthenticated) {
     return <Navigate to="/login" replace state={{ from: location }} />;

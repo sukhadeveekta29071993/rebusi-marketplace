@@ -1,10 +1,10 @@
 import { Navigate, Outlet } from "react-router-dom";
 
-interface PublicRouteProps {
-  isAuthenticated?: boolean;
-}
+import { useAppSelector } from "../store/hooks";
 
-function PublicRoute({ isAuthenticated = false }: PublicRouteProps) {
+function PublicRoute() {
+  const isAuthenticated = useAppSelector((state) => state.auth.isAuthenticated);
+
   if (isAuthenticated) {
     return <Navigate to="/" replace />;
   }

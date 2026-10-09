@@ -15,6 +15,7 @@ import MarketPlace from "../pages/Marketplace/MarketPlace";
 import Profile from "../pages/Profile/Profile";
 
 import ProtectedRoute from "./ProtectedRoute";
+import PublicRoute from "./PublicRoute";
 
 function AppRoutes() {
   return (
@@ -23,16 +24,18 @@ function AppRoutes() {
           Auth Routes
       ================================= */}
 
-      <Route element={<AuthLayout />}>
-        <Route path="/login" element={<Login />} />
+      <Route element={<PublicRoute />}>
+        <Route element={<AuthLayout />}>
+          <Route path="/login" element={<Login />} />
 
-        <Route path="/register" element={<Register />} />
+          <Route path="/register" element={<Register />} />
 
-        <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
 
-        <Route path="/reset-password" element={<ResetPassword />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
 
-        <Route path="/verify-email" element={<VerifyEmail />} />
+          <Route path="/verify-email" element={<VerifyEmail />} />
+        </Route>
       </Route>
 
       {/* ================================
