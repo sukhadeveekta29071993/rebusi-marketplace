@@ -1,0 +1,95 @@
+.font-primary {
+    font-family: var(--font-primary) !important;
+}
+
+.font-secondary {
+    font-family: var(--font-secondary) !important;
+}
+
+.font-display {
+    font-family: var(--font-display) !important;
+}
+
+.font-mono {
+    font-family: var(--font-mono) !important;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+    width: 100%;
+    max-width: var(--container-max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.section,
+.section-padding {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+
+/* =========================================================
+   FLEX
+========================================================= */
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.text-gradient {
+    background: linear-gradient(45deg,
+            var(--orange),
+            var(--saffron));
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
