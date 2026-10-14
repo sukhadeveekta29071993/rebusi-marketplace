@@ -12,6 +12,7 @@ import Home from "../pages/Home/Home";
 import Marketplace from "../pages/Marketplace/Marketplace";
 import Profile from "../pages/Profile/Profile";
 import SellBusiness from "../pages/SellBusiness/SellBusiness";
+import ProtectedRoute from "./ProtectedRoute";
 
 export const getAppRoutes = () => (
   <Route element={<MainLayout />}>
@@ -33,6 +34,13 @@ export const getAppRoutes = () => (
 
     <Route path="/commercial-rental" element={<CommercialRental />} />
 
-    <Route path="/profile" element={<Profile />} />
+    <Route
+      path="/profile"
+      element={
+        <ProtectedRoute>
+          <Profile />
+        </ProtectedRoute>
+      }
+    />
   </Route>
 );
