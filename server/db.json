@@ -1,5 +1,24 @@
 {
-  "users": [],
+  "users": [
+    {
+      "name": "Test User",
+      "email": "test@example.com",
+      "phone": "9876543210",
+      "password": "Test@123",
+      "role": "user",
+      "provider": "email",
+      "id": 1
+    },
+    {
+      "name": "ekta sukhadeve",
+      "email": "sukhadeveekta29071993@gmail.com",
+      "role": "user",
+      "provider": "google",
+      "googleId": "107281407441642782095",
+      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocLAFFcdj5M9n2OS3pfvOscLOYD4JNz05HydXRExaS8kt8HMxog=s96-c",
+      "id": 2
+    }
+  ],
   "businesses": [],
   "enquiries": [],
   "favorites": []
