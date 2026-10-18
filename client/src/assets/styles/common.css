@@ -324,6 +324,40 @@ textarea.form-control {
     background-color: var(--orange-light);
 }
 
+.navbar {
+    transition:
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.navbar .nav-link {
+    transition: color 0.2s ease;
+}
+
+.navbar .nav-link:hover {
+    color: var(--orange) !important;
+}
+
+.navbar .dropdown-item {
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.navbar .dropdown-item:hover {
+    color: var(--orange);
+}
+
+footer a {
+    transition: color 0.2s ease;
+}
+
+footer a:hover {
+    color: var(--orange) !important;
+}
+
+
+
 /* =========================================================
    MODAL
 ========================================================= */
