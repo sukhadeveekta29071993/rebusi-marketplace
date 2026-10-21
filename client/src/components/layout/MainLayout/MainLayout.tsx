@@ -6,8 +6,7 @@ import AnnouncementBar from "../AnnouncementBar/AnnouncementBar";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 
-const ANNOUNCEMENT_HEIGHT = 40;
-const NAVBAR_HEIGHT = 78;
+const ANNOUNCEMENT_HEIGHT = 44;
 
 const MainLayout = () => {
   const [announcementVisible, setAnnouncementVisible] = useState(true);
@@ -31,10 +30,6 @@ const MainLayout = () => {
 
   const navbarTop = announcementVisible ? `${ANNOUNCEMENT_HEIGHT}px` : "0px";
 
-  const contentTopSpacing = announcementVisible
-    ? ANNOUNCEMENT_HEIGHT + NAVBAR_HEIGHT
-    : NAVBAR_HEIGHT;
-
   return (
     <div className="min-vh-100 d-flex flex-column">
       <header>
@@ -49,7 +44,7 @@ const MainLayout = () => {
       <main
         className="flex-grow-1"
         style={{
-          paddingTop: `${contentTopSpacing}px`,
+          paddingTop: "100px",
         }}
       >
         <Outlet />
